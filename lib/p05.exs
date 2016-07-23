@@ -1,7 +1,7 @@
 defmodule P5 do
-  def reverse(list), do: _reverse(list, [])
-  defp _reverse([], acc), do: acc
-  defp _reverse([head | tail], acc), do: _reverse(tail, [head | acc])
+  def reverse(list), do: do_reverse(list, [])
+  defp do_reverse([], acc), do: acc
+  defp do_reverse([head | tail], acc), do: do_reverse(tail, [head | acc])
 end
 
 ExUnit.start

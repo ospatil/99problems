@@ -1,10 +1,10 @@
 defmodule P3 do
   # Find the k'th element of a list. The first element in the list is number 1.
-  def at(pos, list), do: _at(pos, list, 1)
+  def at(pos, list), do: do_at(pos, list, 1)
 
-  defp _at(_, [], _), do: nil
-  defp _at(pos, [head | _], counter) when pos == counter, do: head
-  defp _at(pos, [_ | tail], counter), do: _at(pos, tail, counter + 1)
+  defp do_at(_, [], _), do: nil
+  defp do_at(pos, [head | _], counter) when pos == counter, do: head
+  defp do_at(pos, [_ | tail], counter), do: do_at(pos, tail, counter + 1)
 
 end
 
