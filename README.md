@@ -1,2 +1,2 @@
-# ninety9problems
-99 problems in Elixir
+# 99problems
+Solution to 99 problems in Elixir.
