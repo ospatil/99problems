@@ -11,6 +11,16 @@ defmodule P7Test do
   use ExUnit.Case
 
   test "P7.flatten" do
-    assert P7.flatten([1, 2, [3, 4, [5, 6]], 7]) == [1, 2, 3, 4, 5, 6, 7]
+    # step 1 - empty list
+    assert P7.flatten([]) == []
+
+    # step 2 - list with single element - either list or value
+    assert P7.flatten([1]) == [1]
+    assert P7.flatten([[1]]) == [1]
+    assert P7.flatten([[[1]]]) == [1]
+
+    # step 3 - list with many elements - either list or value
+    assert P7.flatten([[1, [2, 3]], 4, [5, 6]]) == [1, 2, 3, 4, 5, 6]
+    assert P7.flatten([1, [2, 3, [4, 5]], 6]) == [1, 2, 3, 4, 5, 6]
   end
 end
